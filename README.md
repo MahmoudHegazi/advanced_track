@@ -72,6 +72,7 @@ on c.customer_id = o.customer_id
 
 
 first_name |	last_name |	order_date |	order_amount
+--- | --- | --- | ---
 George |	Washington |	07/04/1776 |	$234.56
 Thomas |	Jefferson |	03/14/1760 |	$78.50
 John |	Adams |	05/23/1784 |	$124.00
