@@ -69,3 +69,14 @@ select first_name, last_name, order_date, order_amount
 from customers c
 full join orders o
 on c.customer_id = o.customer_id
+
+
+first_name |	last_name |	order_date |	order_amount
+George |	Washington |	07/04/1776 |	$234.56
+Thomas |	Jefferson |	03/14/1760 |	$78.50
+John |	Adams |	05/23/1784 |	$124.00
+Thomas |	Jefferson |	09/03/1790 |	$65.50
+NULL |	NULL |	07/21/1795 |	$25.50
+NULL |	 |NULL	11/27/1787	$14.40
+James |	Madison |	NULL |	NULL
+James |	Monroe |	NULL |	NULL
