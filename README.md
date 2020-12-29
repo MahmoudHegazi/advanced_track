@@ -31,7 +31,7 @@ inner join orders o
 on c.customer_id = o.customer_id
 ```
 
-Left Join
+# Left Join
 If we wanted to simply append information about orders to our customers table, regardless of whether a customer placed an order or not, we would use a left join. A left join returns all records from table A and any matching records from table B.
 
 ```SQL
@@ -40,3 +40,12 @@ from customers c
 left join orders o
 on c.customer_id = o.customer_id
 ```
+
+
+###### So why would this be useful? By simply adding a “where order_date is NULL” line to our SQL query, it returns a list of all customers who have not placed an order:
+
+select first_name, last_name, order_date, order_amount
+from customers c
+left join orders o
+on c.customer_id = o.customer_id
+where order_date is NULL
