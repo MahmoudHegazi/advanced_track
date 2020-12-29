@@ -59,3 +59,13 @@ select first_name, last_name, order_date, order_amount
 from customers c
 right join orders o
 on c.customer_id = o.customer_id
+
+
+
+# Full Join
+Finally, for a list of all records from both tables, we can use a full join.
+
+select first_name, last_name, order_date, order_amount
+from customers c
+full join orders o
+on c.customer_id = o.customer_id
