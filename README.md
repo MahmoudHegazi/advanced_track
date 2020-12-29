@@ -22,11 +22,21 @@ invoice_item = Table('invoice_item', metadata,
 ```
 
 
-Inner Join
+# Inner Join
 Let’s say we wanted to get a list of those customers who placed an order and the details of the order they placed. This would be a perfect fit for an inner join, since an inner join returns records at the intersection of the two tables.
 ```SQL
 select first_name, last_name, order_date, order_amount
 from customers c
 inner join orders o
+on c.customer_id = o.customer_id
+```
+
+Left Join
+If we wanted to simply append information about orders to our customers table, regardless of whether a customer placed an order or not, we would use a left join. A left join returns all records from table A and any matching records from table B.
+
+```SQL
+select first_name, last_name, order_date, order_amount
+from customers c
+left join orders o
 on c.customer_id = o.customer_id
 ```
