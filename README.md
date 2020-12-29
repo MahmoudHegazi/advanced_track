@@ -51,3 +51,11 @@ left join orders o
 on c.customer_id = o.customer_id
 where order_date is NULL
 ```
+
+# Right Join (good to handle the deleted records)
+Right join is a mirror version of the left join and allows to get a list of all orders, appended with customer information.
+
+select first_name, last_name, order_date, order_amount
+from customers c
+right join orders o
+on c.customer_id = o.customer_id
