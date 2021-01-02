@@ -1,0 +1,102 @@
+<style>
+body {
+ margin: 0;
+}
+
+.grid_container {
+ display: grid;
+ background: #dddd;
+}
+.one { 
+grid-row: 2 / 3;
+width: 70%;
+
+}
+
+.two { 
+grid-row: 2 / 3;
+width: 100%;
+display: flex;
+justify-content: flex-end;
+align-items: center;
+}
+
+ul {
+ display: block;
+}
+ul li {
+ display: inline-block;
+ padding: 8px; 16px;
+ 
+}
+
+#search_btn {
+  background: crimson;
+  color: white;
+  cursor: pointer;
+}
+
+#search_btn:hover {
+  background: gray;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+.grid_container {
+ display: block;
+ background: #dddd;
+
+}
+
+
+ul li {
+ display: block;
+ width: 100%;
+ background-color: gold;
+ border: 2px solid white;
+ text-align: left;
+ 
+}
+
+ul li:hover {
+  background: black;
+  color: white;
+}
+
+.two { 
+
+width: 100%;
+display: inline-block;
+
+}
+
+#search_inpt {
+ width: 70%;
+ height: 30px !important;
+}
+
+
+.one { 
+width: 120%;
+margin-left: -40px;
+}
+
+}
+</style>
+
+<html>
+<div class="grid_container">
+<div class="one" > 
+<ul>
+<li>Logo</li>
+<li>Home</li>
+<li>Login</li>
+</ul>
+</div>
+<div class="two" > 
+<input id="search_inpt" type="text" style="height:30px;">
+<input id="search_btn" type="button" style="height:30px;margin-right:7px;" Value="&#9935;">
+</div>
+</div>
+</html>
